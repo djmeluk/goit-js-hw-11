@@ -11,3 +11,8 @@ body {
     color: #212121;
     line-height: 1.5;
 }
+
+.search-form {display: flex;
+justify-content: center;
+background-color: coral;
+padding: 10px;}
