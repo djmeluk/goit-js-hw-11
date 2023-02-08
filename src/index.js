@@ -1,26 +1,9 @@
-import axios from "axios";
-import Notiflix from 'notiflix';
+
+import Notiflix from "notiflix";
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 import { getImg } from "./api";
 import { renderMarkup } from "./renderMarkup";
-
-
-const formEl = document.querySelector(".search-form")
-console.log(formEl)
-formEl.addEventListener("submit", onSubmit);
-
-function onSubmit(e) {
-    e.preventDefault();
-    const formEl = e.currentTarget;
-    let inputValue = formEl.elements[0].value
-    console.log(inputValue);
-    return axios.get(`https://pixabay.com/api/?key=33315232-0bf1965dd08b086d529aa482a&q=${inputValue}&image_type=photo&orientation=horizontal&safesearch=true`).then(res=>console.log(res)) 
-}
-
-
-
-
 
 const form = document.getElementById('search-form');
 const gallery = document.querySelector('.gallery');
@@ -120,4 +103,5 @@ function onSimpleLightBox() {
       }).refresh();
 }
  
+
 
